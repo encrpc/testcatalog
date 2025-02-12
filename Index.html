@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Categories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 100px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .banner {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 100%;
+      height: calc(100vh - 200px);
+    }
+
+
+
+
+    .content a {
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+
+    .content a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .content a:hover img {
+      transform: scale(1.1);
+    }
+
+    .content a::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .content a:hover::after {
+      background-color: white;
+      color: black;
+    }
+
+    .content a:first-child {
+      grid-row: span 2;
+    }
+
+    footer {
+      background-color: white;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    footer img {
+      width: 100%;
+      height: auto;
+    }
+
+
+  .file-path {
+      background-color: white;
+      color: #432c;
+      text-align: left;
+      padding-left: 15px;
+      line-height: 60px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #3D3935;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+
+ <div class="logo"><a href="index.html">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF0i9x-qDWg22VH5luDGYpcAs3JumOvarBVJ0Jem4ewYgwCOCZM-1Ko9_AMokikRUv2ArjR54HNYInyBgAK0zwCD7CHIBw_oYBlbT7liZIEeIf1PoyGDwV2p3hljm_pEEPnu1UJRzkrkDMs2hO2eP96jUZLM695LGDzjiM7MZHH7b-vtqwHigFwDieppI/w200-h200/Loading1.gif"></a>
+        </div>
+        <div class="banner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1FiTkpsJo2O_Frz426XJnMkjOCfYqurbuhRJie0-Mq-RumIvQcWe-KBP-kgU3kZCkloCEAXwtU-J-62VQRIeQS2P2sUIxZ3D9aWYoH-Ki8qKkjQiSJrPySeETkh26-NthR31Dm_qzCPghg91Jv-lEn1UKJwArTTLrlFOLZNSLgDDI_20XnLRcbEm_va0/s16000/Artboard%202.png">
+        </div>
+    </header>
+
+  <div class="content">
+    <a href="https://encr.co/product_filter?_token=Ly5ZwLjWiF4DXJVzfY6GvJ02sl0dFQEZxrNex4wW&selectedCategory=5&selectedGender=All&selectedSport=18&selectedStyle=0" target="_blank" data-text="ALL APPAREL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1CUD-vN2eGKEoYRNsKua2Wl9XhIlh9Ga8rGm8_-2-Ox776sY2DH0c75ICXIhO1iCVHZk_9T4Ba30WuiCdKXlG23ZR6n96iIC45_u1u_zfHYUZMoqnjoHhOiGRsOspUL2y19nX0LYtOyUjIbGnK82-6zfn5No0DorMwwChKU8PgTfams8rLy6coL7tqsyo/s16000/CTLG-01.jpg" alt="All Apparel"></a>
+    <a href="teamwear.html" data-text="TEAMWEAR"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPmmnlYwfpmqiHx2yGPqZ1dHvPFwec00V8iNLtvfLPDTHpHablgg4NlsNIjx5VJ-BfPE2JVE1E10iwYHN0Dqp0CQ9qy_GoBObwkLnWNVpsgF_yFzdiiy5mNS82-f5H8HwgBze68w4XH-ea_mwy_5LfcJF0KKp1G6h_Tq_xC8RhLoL46vXI2sdSJuFrize6/w640-h428/SCR.png" alt="TEAMWEAR"></a>
+    <a href="Lifestyle.html" data-text="LIFESTYLE"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYN-qplsh9WXObNpKsIZNCysj2-_TbGdxJ7O1-9ygDkJnvpGIUxDrvzRfrAipufc6pnBgLs1db25DdXldGjQCbQUHTAQEzi4hSWtsbiKmRg6ztfdjepfOx0Viar68lgy1TkHRDUWnkmTPAF2CNi0g7jfg4p3o-PrdwQg43kjlxmB7CRT-wLqOu7jydltvn/s16000/CTLG-06.jpg" alt="Bottom"></a>
+    <a href="Training_All.html" data-text="TRAINING APPAREL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUg4AlX2qzHHCVTa730fHhZxR-_OkmnMaJSNtKNFiMmqXkLPMC87elEfXV4rdrQ0afZ2asg4-41_baKZZdIXDPhmg5_cjk7tZHj-kMtIJ5RsczfLq4VGwF-6ZA1Bf6iNFF2So3y4KUN5MPoD6t42XgOy8DfJvSptg7U4YKB5yuu1whQphyphenhyphenjev5LVyhWLeK/s16000/CTLG-07.jpg" alt="Hats"></a>
+    <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=6&selectedGender=All&selectedSport=18&selectedStyle=0" target="_blank" data-text="CORPORATE APPAREL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6XkyppxxEzAQ2L8VLks8KbcguawbgVbcmDJ6Csptzblvtu_6zz9fcxqO9LBf39_UWhUjRrutWL-Vn92mdkSylO2kuqfKdYrxhlaEJMhH38wY84tb27DexQP1u7wabixMe04u0x1VyHoKI5epZeYP0p5szVBqi-iDG1qV5Lj8BgaydkByypyojndi-4PvX/s16000/CTLG-08.jpg" alt="Socks"></a>
+  </div>
+
+   <footer>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCHPCUiAARMqqTpLxCgGpnSALxheSKADu1AOe92RiZmxuSYHFIu_4mY-Ae2KqHLSghxtPNyxeEb9ftu1jagwsUACjMUKb_8gHa85x6wH84G0SXUFsmRUssBJUv1X_OnKxOAkQQOaJTBcV528az1uamhMWZpDxhcyBWDMcAg2xVrbM8LAQtd2p13gmU84I/s16000/Screenshot%202025-01-02%20093540.png" style="width: 100%; height: auto; margin: 0 auto;">
+    </footer>
+
+</body>
+</html>
