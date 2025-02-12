@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Zoom Effect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: grid;
+      grid-template-rows: 60px 60px 1fr auto 240px;
+      grid-template-columns: 1fr;
+      height: 100vh;
+      gap: 10px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border: 1px solid white;
+      color: black;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid white;
+    }
+
+    .logo img {
+        max-width: 50%;
+      max-height: 50%;
+    }
+
+    .banner {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .file-path {
+      background-color: white;
+      color: #432c;
+      text-align: left;
+      padding-left: 15px;
+      line-height: 60px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #3D3935;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #2C2926;
+    }
+
+    footer {
+      background-color: white;
+      color: white;
+      text-align: center;
+      line-height: 240px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .content div {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .content div:hover img {
+      transform: scale(1.2);
+    }
+
+    .content div::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      z-index: 1;
+      transition: background-color 0.6s ease, color 0.6s ease, text-shadow 0.6s ease;
+    }
+
+    .content div:hover::after {
+      background-color: white;
+      color: black;
+      text-shadow: none;
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+  <div class="logo"><a href="index.html">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF0i9x-qDWg22VH5luDGYpcAs3JumOvarBVJ0Jem4ewYgwCOCZM-1Ko9_AMokikRUv2ArjR54HNYInyBgAK0zwCD7CHIBw_oYBlbT7liZIEeIf1PoyGDwV2p3hljm_pEEPnu1UJRzkrkDMs2hO2eP96jUZLM695LGDzjiM7MZHH7b-vtqwHigFwDieppI/w200-h200/Loading1.gif"></a>
+        </div>
+        <div class="banner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1FiTkpsJo2O_Frz426XJnMkjOCfYqurbuhRJie0-Mq-RumIvQcWe-KBP-kgU3kZCkloCEAXwtU-J-62VQRIeQS2P2sUIxZ3D9aWYoH-Ki8qKkjQiSJrPySeETkh26-NthR31Dm_qzCPghg91Jv-lEn1UKJwArTTLrlFOLZNSLgDDI_20XnLRcbEm_va0/s16000/Artboard%202.png">
+        </div>
+    </header>
+
+    <div class="file-path">
+        <center>Training Apparel / Women's</center>
+    </div>
+    <div class="content">
+
+
+
+        <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=11" target="_blank"><div data-text="TOPS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjD1aeQkU2HQQmG_y_MGtC5Y39MyzkqElVDvOHkX6tDExe-n1vkE_-ARxhfoXeJrvY2ggypypKqCyaZiR3-hhH89wJNNobDs2HfOV_s-D5axpj87C1o49NmA09SC-16JULF_SWC3jR5FzoXiR9dkpChlFPyFF_TtD36N_tfejPnm3Z_w-g5AcvCYQmJasa/s16000/CT-03.png"></div></a>
+        
+
+<a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=7" target="_blank"><div data-text="HOODIES & FLEECE"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtLF_Sfo8Tns3AaW2dcKP9MDbtVJx1UzTsaXzcx8itCCSoITaR8MoGMYe8LirWuamU-CpwzkqfzB5EQfcZlWTF71BRN971Tsw72pum47mE4DxcIll_nq9I8PlW_ngcUUGxpzZVJE5AKwovej8yssv6c07kCLauZAGELUkklcOM30pgXSHc5Q-enBlN2IWV/s16000/CT-02.png"></div></a>
+        
+
+<a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=5" target="_blank"><div data-text="OUTERWEAR"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFaaGWEWX4537vP8Uylf2v7IAwDS4BFPKVM6eKvtMNTL5AAKwXfco9hT4CnLwfp0fuayJGg0BPckB5m1O2hAH8gMFo3MQX7C7EoJPi_gmtPX_E1_hIlgtetASbIukRcwKD1okHYJIiYg16DTqLIZFYjbMSflFCID98TvFsSqMskJuBN-7srWp4A1X1Wkeu/s16000/CT-01.png"></div></a>
+       
+
+ <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=17" target="_blank"><div data-text="HATS & HEADBANDS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1fqda22_SFvh6QDTbhEC20CGM_5p-ORN9lbgIoVIBGUwZBb5zvG1miRZq5ewg7AODMf4z5rqALpZyNbVxh3QG2myoVu2OaQjpya6uO70irjW-ov8cu_19b_fPl_tTc_kCehlYXp6ii4U16erN4i2bcv-wCkwkNT9a6pZStdBM5VD-LxtVNXcCwWcRlp6s/s16000/CT-04.png"></div></a>
+      
+
+  <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=3" target="_blank"><div data-text="UNDERWEAR & BRAS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi6lvQsz9UBkecbiiTV0rcP_E9TUzCT4fLPD9DZJy1915EvZaXh0PMsHjxU4QsB1nCQQg6VZIPrTMnktDAopLrIyIGQctxxOxh99r44bi4wt9Czpv7-ju7mp77uKGwsPLe_OCqmwJtUv4kXeXIpjY2dTWUIKTWLXilshMr8a2JdBCrcz73ughYBDAsd-hj/s16000/CT-07.png"></div></a>
+       
+
+ <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=1" target="_blank"><div data-text="BAGS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8s1mOIjozmieP_FJkfZJvQMoW4ujQSMKNwWp_rHtclkGf70wy3K3Fv3zm7ev5tJjz-eVrpewoiILEkc3gC8GTY1sJbr-JJuyVJ-4K6BLbTjQlPXVnd2tqow0D1QTI_ujaJQbT2Ujat3YwKET14nybA6a7syh6_QG8zLChjws8pzAsz4525ShGOwRCWYjf/s16000/CT-05.png"></div></a>
+      
+
+  <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=10" target="_blank"><div data-text="JOGGERS & SWEATS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixzKXoMZMY5Kl4PWVy5XrCB8qNyTKFigQHLby2lpeOcsk8iB_RAshgcHa47ItvuQuRR6Arr7IYczr6qdUoCCGGm16HNBLU0_4z54WLMW5ln4GDh3aCSOuYUum-sE9GMmRBaJw2iuFdZGTY65BxkqJlC7_b7H8Jw0AYwf1zTNevfL8Nk_Bsf3nY0g9kOa4P/s16000/CT-06.png"></div></a>
+      
+
+  <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=8" target="_blank"><div data-text="SHORTS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJVQ5hKVz_dnS4WIRc-h_jIc2ahWYOp75NbrypjYhNntH7YDCZspEbexqnu3JHLK50k-DLQSXeUYSEiGCCV3fTrBGbacIhwUwsN95PA4VwwfZtX9WJqGkTKdmOK7zKWLguozwen367aWuEPLozlYVNmluV83KrefkQbWyQs6HMG5jXoGT03pU0xUG24qLi/s16000/CT-08.png"></div></a>
+      
+
+  <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=2" target="_blank"><div data-text="PANTS & TIGHTS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfuYChfk_PfHKcHife_RZROvN_d4FCDvompgn6DNNXGHWM-Wv6SMCMZAZQ_nUKwhg9ydUL3tLPHti-yF2xv-IM6jrI1ngn-oObKT6-a_3ehmGV5djycU7-MzK7-KXvQLBl8i2uSl0F41XilixlYDbwpIuGGQqadlFCEcFnbeLOjoBABSnUcBwTcm-Cvh2Y/s16000/CT-09.png"></div></a>
+      
+
+ <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=2&selectedGender=Women&selectedSport=18&selectedStyle=9" target="_blank"> <div data-text="SOCKS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWseb7ozINP0Aq3cLRU7EBIaOv4ms8inDl3y9_-altS2U8CAbwIbO7nQVcwiM6IyB6lAQ7IUVhgub_v6v4DWkCBwybjlbjwGATkvuzyShWDgCbEkGpH0pU3ZUVQrvApKwTlCr1GVB4VfrAdATGR5e6Ln4PCzC1yDc0ao81JYlyasHSxfShzhwnHQIS-Mmj/s16000/CT-11.png"></div></a>
+
+
+
+    </div>
+    <div class="back-button">
+        <a href="#" onclick="history.back(); return false;">← Back</a>
+    </div>
+    <footer>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCHPCUiAARMqqTpLxCgGpnSALxheSKADu1AOe92RiZmxuSYHFIu_4mY-Ae2KqHLSghxtPNyxeEb9ftu1jagwsUACjMUKb_8gHa85x6wH84G0SXUFsmRUssBJUv1X_OnKxOAkQQOaJTBcV528az1uamhMWZpDxhcyBWDMcAg2xVrbM8LAQtd2p13gmU84I/s16000/Screenshot%202025-01-02%20093540.png" style="width: 100%; height: auto; margin: 0 auto;">
+    </footer>
+</body>
+</html>

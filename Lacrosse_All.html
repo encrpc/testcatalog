@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Categories - Three Sections</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 100px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+           max-width: 50%;
+      max-height: 50%;
+    }
+
+    .banner {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 100%;
+      height: calc(100vh - 200px);
+    }
+
+    .left-section {
+      width: 100%;
+      height: 100%;
+    }
+
+    .right-section {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+    .right-section a {
+      flex: 1;
+    }
+
+    .content a {
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+
+    .content a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .content a:hover img {
+      transform: scale(1.1);
+    }
+
+    .content a::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .content a:hover::after {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      background-color: white;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    footer img {
+      width: 100%;
+      height: auto;
+    }
+ .file-path {
+      background-color: white;
+      color: #432c;
+      text-align: left;
+      padding-left: 15px;
+      line-height: 60px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #3D3935;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #2C2926;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+
+   <div class="logo"><a href="index.html">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF0i9x-qDWg22VH5luDGYpcAs3JumOvarBVJ0Jem4ewYgwCOCZM-1Ko9_AMokikRUv2ArjR54HNYInyBgAK0zwCD7CHIBw_oYBlbT7liZIEeIf1PoyGDwV2p3hljm_pEEPnu1UJRzkrkDMs2hO2eP96jUZLM695LGDzjiM7MZHH7b-vtqwHigFwDieppI/w200-h200/Loading1.gif"></a>
+        </div>
+        <div class="banner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1FiTkpsJo2O_Frz426XJnMkjOCfYqurbuhRJie0-Mq-RumIvQcWe-KBP-kgU3kZCkloCEAXwtU-J-62VQRIeQS2P2sUIxZ3D9aWYoH-Ki8qKkjQiSJrPySeETkh26-NthR31Dm_qzCPghg91Jv-lEn1UKJwArTTLrlFOLZNSLgDDI_20XnLRcbEm_va0/s16000/Artboard%202.png">
+        </div>
+
+    </header>
+
+  <div class="file-path">
+        <center>Teamwear / Lacrosse</center>
+    </div>
+
+  <div class="content">
+    <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=1&selectedGender=All&selectedSport=1&selectedStyle=0"  target="_blank" class="left-section" data-text="ALL APPAREL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1vw2lV3ax0oiA_kUU55BmWD6_0ckRtoJidp1F-lL7CinNDo42A5JJTdaQnSRwOK125_LQVD1_0JBgIEDm3XAue9BhQmTK7JwfuZfXYHKEPfze_Jf3lDoT9NXDlOEwX_YhQ3XA8daWV4DDWFvBbx3QnCrcw4QKoug0iQN2WqE-bTdW4737tNwE5jJhpEsh/w640-h428/DSC_3983-70.jpg" alt="All Apparel"></a>
+    <div class="right-section">
+      <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=1&selectedGender=Men&selectedSport=1&selectedStyle=0"  target="_blank" data-text="MEN"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimMy4VHY8JygrgImWjK_7nN-EXe-QgKja1iLPMC1j6N-RHFNmAErzRMbpcPnhCTVhTCmiZ30nHnKKAMLk9KTvlksvubo_A8qdGhPUOVAw_10qMrOEgI4l_J4tJEja90TEX8bxbuvwXB2XrIAa1GzLZPp53ayHVsKpvJuUBuNPbejQuvqht1NuynHDgVnhN/s16000/CT-01.jpg" alt="Hats"></a>
+      <a href="https://encr.co/product_filter?_token=Jpck6shoSYUi1SWMgEBOlPyGBP7qzCxuY0MAKGw5&selectedCategory=1&selectedGender=Women&selectedSport=1&selectedStyle=0"  target="_blank" data-text="WOMEN"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIny8Tb6OxFBVu5UBpHVA-UDTMVFD6kbOnnboZFM2MwZhhIE6KVc9waQO1Soj2uo9psnG1uMeoLLkfZ1cQuRngC93iEZ9N-sqWICL2AH6ahkwIs5tBuINXP_01QbOdBd9R2eDB-Nsg0piETtXo9LgRGpvfHRZ1N3S3Q5JsrxNVbbfFc7fGKFkUgDES3dWj/s16000/CT-02.jpg" alt="Socks"></a>
+    </div>
+  </div>
+
+ <div class="back-button">
+        <a href="#" onclick="history.back(); return false;">← Back</a>
+    </div>
+    <footer>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCHPCUiAARMqqTpLxCgGpnSALxheSKADu1AOe92RiZmxuSYHFIu_4mY-Ae2KqHLSghxtPNyxeEb9ftu1jagwsUACjMUKb_8gHa85x6wH84G0SXUFsmRUssBJUv1X_OnKxOAkQQOaJTBcV528az1uamhMWZpDxhcyBWDMcAg2xVrbM8LAQtd2p13gmU84I/s16000/Screenshot%202025-01-02%20093540.png" style="width: 100%; height: auto; margin: 0 auto;">
+    </footer>
+</body>
+</html>

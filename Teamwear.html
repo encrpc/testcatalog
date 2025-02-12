@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Equipment Categories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 100px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      max-width: 50%;
+      max-height: 50%;
+    }
+
+    .banner {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      height: calc(100vh - 200px);
+    }
+
+    .content a {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .content a:hover img {
+      transform: scale(1.1);
+    }
+
+    .content a::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .content a:hover::after {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      background-color: white;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    footer img {
+      width: 100%;
+      height: auto;
+    }
+ .file-path {
+      background-color: white;
+      color: #432c;
+      text-align: left;
+      padding-left: 15px;
+      line-height: 60px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #3D3935;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #2C2926;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="logo"><a href="index.html">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF0i9x-qDWg22VH5luDGYpcAs3JumOvarBVJ0Jem4ewYgwCOCZM-1Ko9_AMokikRUv2ArjR54HNYInyBgAK0zwCD7CHIBw_oYBlbT7liZIEeIf1PoyGDwV2p3hljm_pEEPnu1UJRzkrkDMs2hO2eP96jUZLM695LGDzjiM7MZHH7b-vtqwHigFwDieppI/w200-h200/Loading1.gif"></a>
+        </div>
+        <div class="banner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1FiTkpsJo2O_Frz426XJnMkjOCfYqurbuhRJie0-Mq-RumIvQcWe-KBP-kgU3kZCkloCEAXwtU-J-62VQRIeQS2P2sUIxZ3D9aWYoH-Ki8qKkjQiSJrPySeETkh26-NthR31Dm_qzCPghg91Jv-lEn1UKJwArTTLrlFOLZNSLgDDI_20XnLRcbEm_va0/s16000/Artboard%202.png">
+        </div>
+
+    </header>
+
+  <div class="file-path">
+        <center>Teamwear</center>
+    </div>
+
+  <div class="content">
+    <a href="Lacrosse_All.html" data-text="LACROSSE"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgL3H_ITzOetdT2eZYwVSJ9CTS20NLzNZlZXaWfO3cwYopjXDgtlyHUnikdrVhu___rCVZ-MhscDV30lB7hF_pPyG1m3s8n0KZGHPlf5AYa_zFt-yoQD2y7ASYu6Jv3b0-3gADuzbkz0s8B9-QUMUZfY7bR1OOKRi9fqsQRPNfZE9dp_Yjkd6SdOoiNTqCA/s16000/LAX.png" alt="Sticks"></a>
+    <a href="Soccer_All.html" data-text="SOCCER"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFWM9sPKe6sjCWHPTVbK5_MMXmLzoXopzfmsPC3ASDGDYWjqOQU6yqCUb-SkfrLNIrbWd64V5UmHSMry6P-FKc84ye2ZW9mI6mGYKe-ksr_DpeC71S86rgbpmIV5VptWo-hr7MtGlBjbQN1SuuLLVRza1xcUTVSTEbLrXEz0eb2HzbKtclohWE_eDYZxAM/s16000/SCR.png" alt="Balls"></a>
+    <a href="baseball_All.html" data-text="BASEBALL/SOFTBALL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ3uJPi_Z9MtQBMDe4OXxJaIlhewWGeGAE6RyOorg-i5Hu6-GVGp-WxDYsY3JhebFmtvo7fDpkG_nW4vA9BDTItBv1JXUt0YM_FtY1jhD0JosWXOhGem64kpRiVEoF127L333HpBt2FZmf9GMScELQslu1we23EzVuVgI0nG8xlmU1P-dVPBL-n2YVQpGv/s16000/BB.png" alt="Bats"></a>
+    <a href="mma_All.html" data-text="MUAY THAI/MMA"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJiR0Syo18BnwGSzbasg6c8Ezw2lMhxo7uf9PixgbeDS8yvqWW8JW16PuisV711U0J80XujZL1cil7FfCJ2aAdqwDd03aO0zja1vXtVZPZIXWf-6puPyMg_4gnlZANQF8QHt_xQ4VNWGgRF-g5_5Nnd72W30TbsZ6rEQ_Fqh-MVZrOZzuHBWxtBLDEXh07/s16000/MMA.png" alt="Gloves"></a>
+    <a href="basketball_All.html" data-text="BASKETBALL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBvfyeHIA9xy9NbiOVNcEGbyaqCIAMoFQe1EU9MwALKJOmxzCbS-ZgowJP20YQuC7tp14xHpcZGF5wBcEYiMkFQmgJhC7kqa6hypC3Ies55SMjGa020ilyy0V2iZ5RWuvvEV2wjyVvMF1NjefXv2vBRX4kR2S3oQpYTiIeQxF_9Pmr2rREjwVw6Tl7aO3k/s16000/BA.png" alt="Hats"></a>
+    <a href="volleyball_All.html" data-text="VOLLEYBALL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlmQQWYETR9fYhPUCl1Pxk4cKCorT4Zd84Zqv_lK_q2UWt-BpOUvZiUCPPXKb3x91mmciFtJMfsR6B12exkxiVXI2FTTk91nmkKnm9Q-F7lbN37anQ7D8WW1aoMad89bZcTgnSngqR0YRnr2_i50ae7jrYeyTSAuB28rrpbNUFseQo5cPrDTF8Og0OQmp4/s16000/VL.png" alt="Helmets"></a>
+    <a href="Diskgolf_All.html" data-text="DISC GOLF"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRftD1XZWA9MFLG96krhg7tiAMxMLnG_NdLj7jyvZmjMyj6pisS2KzsLOoidPHgl23biNPrZ1OA95gzFU9EWeVn-CBr-kKFuozjeX2N1taCEQ2o1x8GsRJwOKTiU17qWW7uhScYoHiHRim0XiCVJdQravqBB7aKxC_zxN4fcCHotU2Y_HVZZzl748Xyz6w/s16000/DG.png" alt="Pads"></a>
+    <a href="watersports_All.html" data-text="WATER SPORTS"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaSOsiwSWecRiEr4IVBL31d0ozFHNGy7qJfBsJ8GYuNpduTsi0h9bCQ9TxL3ujYdRFEhEKkbofYRlpKyKyyTm8dJlFJ0gvq4QytJxaV-nMysW_-EOIZ55ueGWE-1NKgxzZ1FEJQiXmsh12mzBFmFxVkvCYloH23qqRpLw46ZObaFpZNhyDUfb_SHYgHa7T/s16000/WS.png" alt="Shoes"></a>
+  </div>
+ <div class="back-button">
+        <a href="#" onclick="history.back(); return false;">← Back</a>
+    </div>
+
+ <footer>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCHPCUiAARMqqTpLxCgGpnSALxheSKADu1AOe92RiZmxuSYHFIu_4mY-Ae2KqHLSghxtPNyxeEb9ftu1jagwsUACjMUKb_8gHa85x6wH84G0SXUFsmRUssBJUv1X_OnKxOAkQQOaJTBcV528az1uamhMWZpDxhcyBWDMcAg2xVrbM8LAQtd2p13gmU84I/s16000/Screenshot%202025-01-02%20093540.png" style="width: 100%; height: auto; margin: 0 auto;">
+    </footer>
+</body>
+</html>
